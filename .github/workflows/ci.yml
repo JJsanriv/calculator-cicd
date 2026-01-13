@@ -7,9 +7,17 @@ on:
     branches: [main]
 
 jobs:
+  # CI - Hello User
   hello:
     runs-on: ubuntu-latest 
     steps:
       - name: Hello User
         run: echo "Hello User!" 
 
+  # CD - Deply app
+  deploy:
+    runs-on: ubuntu-latest
+    needs: hello
+    steps:
+      - name: Deploy
+        run: echo "Deploying app..."
