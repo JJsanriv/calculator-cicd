@@ -1,6 +1,5 @@
 # 🧮 Python Calculator with CI/CD
 
-![CI Pipeline](https://github.com/TU-USUARIO/python-calculator-cicd/actions/workflows/ci. yml/badge.svg)
 ![Python](https://img.shields.io/badge/python-3.9%20%7C%203.10%20%7C%203.11-blue)
 
 A simple Python calculator project demonstrating **CI/CD best practices** using GitHub Actions.
