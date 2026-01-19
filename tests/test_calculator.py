@@ -42,6 +42,9 @@ class TestDivide:
 class TestPower:
     def test_power_positive_numbers(self):
         assert power(2, 4) == 16
+    
+    def test_power_zero_exponent(self):
+        assert power(3, 0) == 1
 
     def test_power_negative_error(self):
         with pytest.raises(ValueError, match="Exponent cannot be less than "):

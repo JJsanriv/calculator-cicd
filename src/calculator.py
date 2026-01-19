@@ -37,13 +37,10 @@ def root(a: int) -> float:
 
 if __name__ == "__main__":
     
-    while True:
-        x = input("Select a function: \n- 'a' for Add\n- 'b' for Substraction\n- 'c' for Multiplication\n- 'd' for Division\n- 'e' for Exponentation\n- 'f' for Square root\nYour selection: ")
-        if x == True:
-            print("The input was a number! Try again")
-            continue
-        else:
-            break
+    x = input("Select a function: \n- 'a' for Add\n- 'b' for Substraction\n- 'c' for Multiplication\n- 'd' for Division\n- 'e' for Exponentation\n- 'f' for Square root\nYour selection: ")
+    
+    if x != 'a' or 'b' or 'c' or 'd' or 'e':
+        print("Incorrect input! Try again")
 
     match x:
         case 'a':
