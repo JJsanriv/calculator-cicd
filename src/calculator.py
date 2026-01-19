@@ -1,3 +1,5 @@
+import math
+
 """Simple calculator module to demonstrate CI/CD."""
 
 def add(a:  float, b: float) -> float:
@@ -27,13 +29,17 @@ def power(a: float, b: float) -> float:
         raise ValueError("Exponent cannot be less than 0")
     elif b == 0:
         return 1
-    return a ^ b
+    return a ** b
+
+def root(a: int) -> float:
+    """Any root of a number"""
+    return math.sqrt(a)
 
 if __name__ == "__main__":
     
     while True:
-        x = input("Select a function: \n- 'a' for Add\n- 'b' for Substraction\n- 'c' for Multiplication\n- 'd' for Division\n- 'e' for Exponentation\nYour selection: ")
-        if x.isdigit() == True:
+        x = input("Select a function: \n- 'a' for Add\n- 'b' for Substraction\n- 'c' for Multiplication\n- 'd' for Division\n- 'e' for Exponentation\n- 'f' for Square root\nYour selection: ")
+        if x == True:
             print("The input was a number! Try again")
             continue
         else:
@@ -69,6 +75,11 @@ if __name__ == "__main__":
             y = input("First number is ")
             z = input("Second number is ")
             n = pow(float(y),float(z))
+            print(f"The result is -->", n)
+        case 'f':
+            print("You selected Square root! Select two numbers")
+            y = input("The number is ")
+            n = root(int(y))
             print(f"The result is -->", n)
     
     

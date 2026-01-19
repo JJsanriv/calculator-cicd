@@ -1,7 +1,7 @@
 """Unit tests for calculator module."""
 
 import pytest
-from src.calculator import add, subtract, multiply, divide
+from src.calculator import add, subtract, multiply, divide, power, root
 
 
 class TestAdd:
@@ -38,3 +38,15 @@ class TestDivide:
     def test_divide_by_zero_raises_error(self):
         with pytest.raises(ValueError, match="Cannot divide by zero"):
             divide(10, 0)
+
+class TestPower:
+    def test_power_positive_numbers(self):
+        assert power(2, 4) == 16
+
+    def test_power_negative_error(self):
+        with pytest.raises(ValueError, match="Exponent cannot be less than "):
+            power(4, -1)
+
+class TestRoot:
+    def test_root(self):
+        assert root(25) == 5
