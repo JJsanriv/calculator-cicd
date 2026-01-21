@@ -47,10 +47,10 @@ jobs:
       - name: Build executable
         run:  |
           pip install pyinstaller
-          pyinstaller --onefile sr/calculadora.py
+          pyinstaller --onefile sr/calculator.py
 
       - name: Create Release
         uses: softprops/action-gh-release@v2
         with:
-          files: dist/calculadora
+          files: dist/calculator
           generate_release_notes: true
