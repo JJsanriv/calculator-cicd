@@ -52,5 +52,5 @@ jobs:
       - name: Create Release
         uses: softprops/action-gh-release@v2
         with:
-          files: dist/calculator
+          files: dist/calculator_cicd
           generate_release_notes: true
