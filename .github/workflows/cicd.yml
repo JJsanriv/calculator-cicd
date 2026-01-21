@@ -7,6 +7,10 @@ on:
   pull_request:
     branches:  [main]
 
+permissions:
+  contents: write
+
+
 jobs:
   test:
     runs-on:  ubuntu-latest
@@ -32,25 +36,30 @@ jobs:
           pytest -v
 
   release:
-    needs: test
+    needs:  test
     if: startsWith(github.ref, 'refs/tags/v')
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
 
-    steps: 
-      - uses: actions/checkout@v5
+    steps:  
+      - uses:  actions/checkout@v5
 
       - name:  Setup Python
-        uses: actions/setup-python@v5
-        with:
-          python-version:  '3.12'
+        uses:  actions/setup-python@v5
+        with: 
+          python-version:   '3.12'
 
       - name: Build executable
         run:  |
           pip install pyinstaller
-          pyinstaller --onefile src/calculator.py
+          pyinstaller --onefile src/calculator.py --name calculator
+
+      - name: List files
+        run:  ls -la dist/
 
       - name: Create Release
         uses: softprops/action-gh-release@v2
-        with:
-          files: dist/calculator_cicd
-          generate_release_notes: true
+        with: 
+          files: dist/calculator
+          generate_release_notes:  true
