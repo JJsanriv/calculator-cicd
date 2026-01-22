@@ -5,13 +5,11 @@
 A simple Python calculator project demonstrating **CI/CD best practices** using GitHub Actions.
 
 ## 🚀 Features
-
+- ✅ Simple, efficent, calculator app through terminal
 - ✅ Clean, well-documented Python code
 - ✅ Unit tests with pytest
-- ✅ Code coverage reporting
-- ✅ Linting with flake8
 - ✅ Multi-version Python testing (3.9, 3.10, 3.11)
-- ✅ Automated CI pipeline with GitHub Actions
+- ✅ Automated CI pipeline with GitHub Actions and CD implementation
 
 ## 📁 Project Structure
 
@@ -31,7 +29,7 @@ A simple Python calculator project demonstrating **CI/CD best practices** using 
 
 ```bash
 # Clone the repository
-git clone https://github.com/TU-USUARIO/python-calculator-cicd.git
+git clone https://github.com/JJsanriv/calculator-cicd.git
 cd python-calculator-cicd
 
 # Create virtual environment
@@ -43,21 +41,14 @@ pip install -r requirements.txt
 
 # Run tests
 pytest tests/ -v
-
-# Run linter
-flake8 src/ tests/
 ```
 
 ## 🔄 CI/CD Pipeline
 
 This project uses GitHub Actions to automatically: 
 
-1. **Lint** - Check code style with flake8
-2. **Test** - Run unit tests on multiple Python versions
+1. **Test** - Run unit tests on multiple Python versions
 3. **Build** - Verify the package structure
 
 The pipeline runs on every push to `main`/`develop` and on pull requests. 
 
-## 📊 Code Coverage
-
-Tests include coverage reporting.  View the latest coverage in the Actions artifacts.

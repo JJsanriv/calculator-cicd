@@ -36,9 +36,9 @@ def root(a: int) -> float:
     return math.sqrt(a)
 
 if __name__ == "__main__":
-    
+    # Message and input selection with match/cases
     x = input("Select a function: \n- 'a' for Add\n- 'b' for Substraction\n- 'c' for Multiplication\n- 'd' for Division\n- 'e' for Exponentation\n- 'f' for Square root\nYour selection: ")
-    
+
     if x != 'a' or 'b' or 'c' or 'd' or 'e':
         print("Incorrect input! Try again")
 
